@@ -1,4 +1,94 @@
+
+/*/
+
+Table of Contents
+
+ /* CH01 - Box sizing */
+ /* CH02 - Typography */
+ /* CH03 - Page Structure */
+ /* CH04 - Media Queries */
+
+/*/
+
+/* CH01 - Box sizing */
+
+*,
+html {
+   box-sizing: border-box;
+}
+*, *:before, *:after {
+   box-sizing: inherit;
+}
+
+/* CH02 - Typography */
+
 body {
   background-color: #dadada;
   font-size: 10px;
+}
+
+h1 {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.5em;
+  padding: 10%;
+  text-align: left;
+}
+
+/* CH03 - Page Structure */
+
+.container {
+  text-align: center;
+}
+
+.preview-baku, .preview-london, .preview-madrid, .preview-rome {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  margin-bottom: 10px;
+  height: 200px;
+  width: 100%;
+}
+
+.preview-baku {
+  background-image: url(../images/baku.jpg);
+}
+
+.preview-london {
+  background-image: url(../images/london.png);
+}
+
+.preview-madrid {
+  background-image: url(../images/madrid.jpg);
+}
+
+.preview-rome {
+  background-image: url(../images/rome.jpg);
+}
+
+/* CH04 - Media Queries */
+
+/* Tablet sizing */
+@media screen and (min-width: 575px) {
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 45%;
+  }
+}
+
+/* Laptop sizing */
+@media screen and (min-width: 991px) {
+  .preview-baku, .preview-london, .preview-madrid, .preview-rome {
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 20%;
+  }
 }
